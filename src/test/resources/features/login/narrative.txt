@@ -1,0 +1,5 @@
+User Authentication
+In order to access the application
+As a registered user
+I want to be able to log in and log out of the application
+Additionally, I want the system to show an error message when I enter invalid login credentials

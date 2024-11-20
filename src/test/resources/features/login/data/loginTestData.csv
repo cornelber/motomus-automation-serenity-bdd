@@ -1,0 +1,4 @@
+email,password,expectedMessage,isError
+nifovav422@gitated.com,1379513795,CONTUL MEU,false
+test@gmail.com,1379513795,Adresa de e-mail / parola introduse sunt incorecte.,true
+test@gmail.com,,Adresa de e-mail / parola introduse sunt incorecte.,true

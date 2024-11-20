@@ -1,0 +1,5 @@
+Add Review Feature
+In order to share feedback on a product
+As a user
+I want to submit a review with valid fields and see a success message,
+Additionally, I want to see an error message when mandatory fields are missing.

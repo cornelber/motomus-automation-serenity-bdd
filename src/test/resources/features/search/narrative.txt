@@ -1,0 +1,4 @@
+Search functionality
+In order to help users find desired products
+As a shopper
+I want to be able to search for products and receive appropriate results or feedback

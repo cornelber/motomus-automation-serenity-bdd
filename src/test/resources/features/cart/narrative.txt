@@ -1,0 +1,5 @@
+Add Random Product to Cart
+In order to purchase items
+As a shopper
+I want to be able to add a random product to the cart
+And verify that the product appears in the cart modal
