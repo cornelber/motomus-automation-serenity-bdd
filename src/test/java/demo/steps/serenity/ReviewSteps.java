@@ -2,7 +2,6 @@ package demo.steps.serenity;
 
 import demo.pages.Review_Page;
 import demo.pages.SharedElements_Page;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 

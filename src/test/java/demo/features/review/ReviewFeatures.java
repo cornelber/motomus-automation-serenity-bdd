@@ -1,6 +1,6 @@
 package demo.features.review;
 
-import demo.config.URLConfig;
+import demo.config.URLConfigConstants;
 import demo.steps.serenity.ReviewSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;
@@ -23,7 +23,7 @@ public class ReviewFeatures {
     @Issue("FTP-Add-Review-01")
     @Test
     public void userSendReviewWithValidFields() {
-        webdriver.get(URLConfig.SPECIFIC_PRODUCT_PAGE_URL);
+        webdriver.get(URLConfigConstants.SPECIFIC_PRODUCT_PAGE_URL);
         reviewSteps.acceptCookieConsent();
 
         reviewSteps.openReviewModal();
@@ -33,7 +33,7 @@ public class ReviewFeatures {
 
     @Test
     public void userSendReviewWithMissedMandatoryFields() {
-        webdriver.get(URLConfig.SPECIFIC_PRODUCT_PAGE_URL);
+        webdriver.get(URLConfigConstants.SPECIFIC_PRODUCT_PAGE_URL);
         reviewSteps.acceptCookieConsent();
 
         reviewSteps.openReviewModal();

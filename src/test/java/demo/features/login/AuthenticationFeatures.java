@@ -1,6 +1,6 @@
 package demo.features.login;
 
-import demo.config.URLConfig;
+import demo.config.URLConfigConstants;
 import demo.steps.serenity.AuthenticationSteps;
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Issue;
@@ -29,7 +29,7 @@ public class AuthenticationFeatures {
     @Issue("FTP-Login-Logout-01")
     @Test
     public void validateLoginAndLogoutFunctionality() {
-        webdriver.get(URLConfig.REGISTER_PAGE_URL);                                        // Navigăm la pagina de login
+        webdriver.get(URLConfigConstants.REGISTER_PAGE_URL);                               // Navigăm la pagina de login
         authSteps.acceptCookieConsent();                                                   // Acceptăm cookie
         authSteps.loginToMotoMusServerWithCredentials(email, password);                    // Executăm login cu datele parametrizate
         authSteps.verifyDisplayedMessage(expectedMessage, Boolean.parseBoolean(isError));  // Verificăm mesajul afișat
@@ -37,7 +37,7 @@ public class AuthenticationFeatures {
         // Dacă este un login valid, verificăm și logout-ul
         if(!Boolean.parseBoolean(isError)) {
             authSteps.logoutFromMotoMusAccount();
-            authSteps.verifyRedirectionToHomePage(URLConfig.HOME_PAGE_URL);
+            authSteps.verifyRedirectionToHomePage(URLConfigConstants.HOME_PAGE_URL);
         }
     }
 

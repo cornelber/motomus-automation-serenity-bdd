@@ -1,6 +1,6 @@
 package demo.features.cart;
 
-import demo.config.URLConfig;
+import demo.config.URLConfigConstants;
 import demo.steps.serenity.CartSteps;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -24,7 +24,7 @@ public class CartFeatures {
     @Issue("FTP-Add-Product-01")
     @Test
     public void userCanAddRandomProductToCart() throws InterruptedException {
-        webdriver.get(URLConfig.ACCESSORIES_PAGE_URL);                                  // Accesăm pagina de catalog
+        webdriver.get(URLConfigConstants.ACCESSORIES_PAGE_URL);                                  // Accesăm pagina de catalog
         cartSteps.acceptCookieConsent();                                                // Acceptăm banner-ul de consimțământ pentru cookie-uri
 
         // Obținem și verificăm lista de produse disponibile

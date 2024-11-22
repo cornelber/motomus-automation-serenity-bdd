@@ -1,6 +1,6 @@
 package demo.features.search;
 
-import demo.config.URLConfig;
+import demo.config.URLConfigConstants;
 import demo.steps.serenity.SearchSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;
@@ -25,7 +25,7 @@ public class SearchFeatures {
     public void searchWithValidTermShouldDisplayProducts () {
         String searchTerm = "yamaha";
 
-        webdriver.get(URLConfig.HOME_PAGE_URL);
+        webdriver.get(URLConfigConstants.HOME_PAGE_URL);
         searchSteps.acceptCookieConsent();
         searchSteps.enterSearchTerm(searchTerm);
         searchSteps.verifySearchOutcome(); // Verifică afișarea produselor
@@ -35,7 +35,7 @@ public class SearchFeatures {
     public void searchWithInvalidTermShouldShowNoResults () {
         String searchTerm = "notexistentproduct";
 
-        webdriver.get(URLConfig.HOME_PAGE_URL);
+        webdriver.get(URLConfigConstants.HOME_PAGE_URL);
         searchSteps.acceptCookieConsent();
         searchSteps.enterSearchTerm(searchTerm);
         searchSteps.verifySearchOutcome(); // Verifică mesajul de eroare
